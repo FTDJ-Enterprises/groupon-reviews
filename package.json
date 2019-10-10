@@ -1,17 +1,30 @@
 {
-    "name": "",
-    "version": "",
-    "description": "",
-    "author": "",
-    "license": "",
-    "engines": {
-      "node": ">=6.13.0"
-    },
-    "scripts": {
-    },
-    "dependencies": {
-    },
-    "devDependencies": {
-      "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor"
-    }
+  "name": "groupon-reviews",
+  "version": "1.0.0",
+  "description": "this service represents all the review for a product in the GROUPON product page",
+  "author": "Jeehyae Dance",
+  "license": "",
+  "engines": {
+    "node": ">=6.13.0"
+  },
+  "scripts": {
+    "start": "webpack -d --watch & nodemon ./server/index.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "mysql": "^2.17.1",
+    "nodemon": "^1.19.3",
+    "path": "^0.12.7",
+    "react": "^16.10.2",
+    "react-dom": "^16.10.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.6.3",
+    "@babel/preset-env": "^7.6.3",
+    "@babel/preset-react": "^7.6.3",
+    "babel-loader": "^8.0.6",
+    "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor",
+    "webpack": "^4.41.0",
+    "webpack-cli": "^3.3.9"
   }
+}
