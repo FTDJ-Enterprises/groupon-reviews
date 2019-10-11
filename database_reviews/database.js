@@ -1,10 +1,6 @@
 var mysql = require('mysql')
-var connection = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: '',
-    database: 'reviews'
-})
+var config = require('./sql-config.js')
+var connection = mysql.createConnection(config)
 
 connection.connect()
 

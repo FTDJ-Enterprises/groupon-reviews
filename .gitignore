@@ -26,3 +26,6 @@ dist/
 
 # fake data
 ./database_reviews/fakeReview.csv
+
+# sql login info
+./database_reviews/sql-config.js
