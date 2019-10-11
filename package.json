@@ -8,10 +8,12 @@
     "node": ">=6.13.0"
   },
   "scripts": {
-    "start": "webpack -d --watch & nodemon ./server/index.js"
+    "start": "webpack -d --watch & nodemon ./server/index.js",
+    "seed": "node ./database_reviews/fake-data.js"
   },
   "dependencies": {
     "express": "^4.17.1",
+    "faker": "^4.1.0",
     "mysql": "^2.17.1",
     "nodemon": "^1.19.3",
     "path": "^0.12.7",
