@@ -1,15 +1,11 @@
 var mysql = require('mysql')
-var connection = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: '',
-    database: 'reviews'
-})
+var config = require('./sql-config.js')
+var connection = mysql.createConnection(config)
 
 connection.connect()
 
-var getAllReview = function(callback) {
-    connection.query('SELECT * FROM reviews', function(err, result) {
+var getAllReview = function(callback, productId) {
+    connection.query(`SELECT * FROM reviews WHERE product_id = ${productId}`, function(err, result) {
         if(err) {
             throw err
         } else {
