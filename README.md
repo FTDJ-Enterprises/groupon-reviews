@@ -4,16 +4,20 @@
 
 ## Related Projects
 
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
+- https://github.com/teamName/repo
+- https://github.com/teamName/repo
+- https://github.com/teamName/repo
+- https://github.com/teamName/repo
 
 ## Table of Contents
 
 1. [Usage](#Usage)
 1. [Requirements](#requirements)
 1. [Development](#development)
+
+## Style
+
+This module is using prettier code formatter instead of airbnb style guide, because prettier will automate formatting as opposed to having to manually fix errors with airbnb style guide.
 
 ## Usage
 
