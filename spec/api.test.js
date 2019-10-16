@@ -10,7 +10,7 @@ beforeAll(async () => {
 
 beforeEach(async () => {
   await data.query(
-    "LOAD DATA LOCAL INFILE 'testReview.csv' INTO TABLE reviews FIELDS TERMINATED BY ',' LINES TERMINATED BY ',' (text, star, verified, name, date, product_id);"
+    `LOAD DATA LOCAL INFILE 'fakeReview.csv' INTO TABLE reviews FIELDS TERMINATED BY ',' ENCLOSED BY '"' LINES TERMINATED BY ',' (text, star, verified, name, date, product_id);`
   );
 });
 afterEach(async () => {

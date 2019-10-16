@@ -1,5 +1,6 @@
 import React from "react";
 import StarIcon from "./StarIcon.jsx";
+import VerifiedIcon from "./VerifiedIcon.jsx";
 
 const Review = props => {
   //depends on review score, only first few star will be need to be filled
@@ -20,7 +21,12 @@ const Review = props => {
       <div className="firstLine">
         {stars}
         <p>{props.review.name}</p>
-        {props.review.verified ? <p>Verified Purchaser</p> : null}
+        {props.review.verified ? (
+          <p>
+            <VerifiedIcon />
+            &nbsp; Verified Purchaser
+          </p>
+        ) : null}
         <p>{props.review.date.substring(4, 15)}</p>
       </div>
       <p>{props.review.text}</p>
