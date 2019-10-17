@@ -1,10 +1,11 @@
 import React from "react";
+import ReviewList from "./ReviewList.jsx";
 
 class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      hi: true
+      reviews: []
     };
   }
 
@@ -12,13 +13,18 @@ class App extends React.Component {
     let randomProductId = Math.floor(Math.random() * 100);
     fetch(`/api/${randomProductId}/reviews/`)
       .then(response => response.json())
-      .then(data => console.log(data));
+      .then(data =>
+        this.setState({
+          reviews: data
+        })
+      );
   }
 
   render() {
     return (
       <div>
-        <p>Hi You</p>
+        <h1>Customer Reviews</h1>
+        <ReviewList review={this.state.reviews} />
       </div>
     );
   }
