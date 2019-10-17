@@ -22,14 +22,15 @@ class App extends React.Component {
         this.setState({
           reviews: data
         })
-      );
+      )
+      .catch(error => console.log(error));
   }
 
   render() {
     return (
       <div>
         <Title>Customer Reviews</Title>
-        <ReviewList review={this.state.reviews} />
+        <ReviewList reviews={this.state.reviews} />
       </div>
     );
   }

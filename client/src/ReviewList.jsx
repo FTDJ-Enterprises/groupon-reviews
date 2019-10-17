@@ -4,7 +4,7 @@ import Review from "./Review.jsx";
 const ReviewList = props => {
   return (
     <div>
-      {props.review.map(review => (
+      {props.reviews.map(review => (
         <Review key={review.id} review={review} />
       ))}
     </div>
