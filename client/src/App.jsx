@@ -1,5 +1,10 @@
 import React from "react";
 import ReviewList from "./ReviewList.jsx";
+import styled from "styled-components";
+
+const Title = styled.h1`
+  font-family: "Open Sans", sans-serif;
+`;
 
 class App extends React.Component {
   constructor() {
@@ -23,7 +28,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <h1>Customer Reviews</h1>
+        <Title>Customer Reviews</Title>
         <ReviewList review={this.state.reviews} />
       </div>
     );
