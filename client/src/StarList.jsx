@@ -4,7 +4,7 @@ import HalfStar from "./HalfStar.jsx";
 import { splitNum } from "./helper.js";
 
 const StarList = props => {
-  const [wholeNum, decimalNum] = splitNum(props.avgReview);
+  let [wholeNum, decimalNum] = splitNum(props.avgReview);
   const fullStar = [8, 9];
   const halfStar = [7, 6, 5, 4, 3];
   let stars = [];
