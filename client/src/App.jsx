@@ -35,7 +35,7 @@ class App extends React.Component {
 
   componentDidMount() {
     let randomProductId = Math.floor(Math.random() * 100);
-    fetch(`/api/${randomProductId}/reviews/`)
+    fetch(`http://localhost:3001/api/${randomProductId}/reviews/`)
       .then(response => response.json())
       .then(data =>
         this.setState({
