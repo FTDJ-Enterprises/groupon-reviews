@@ -24,6 +24,11 @@ coverage
 build/
 dist/
 
+# bundle
+bundle.js
+main.bundle.js
+vendor.bundle.js
+
 # fake data
 database_reviews/fakeReview.csv
 
