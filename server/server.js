@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
 const db = require("../database_reviews/database.js");
+const port = 3001;
 
 app.use(bodyParser.json());
 app.use(express.static("public"));
@@ -21,6 +22,6 @@ app.get("/api/:id/reviews", (req, res) => {
   });
 });
 
-app.listen(3001, () => console.log(`server app listening on port 3001!`));
+app.listen(port, () => console.log(`server app listening on port ${port}!`));
 
 module.exports = app;
