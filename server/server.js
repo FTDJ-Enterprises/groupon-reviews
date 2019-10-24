@@ -14,6 +14,7 @@ app.use(function(req, res, next) {
 
 app.get("/api/:id/reviews", (req, res) => {
   db.query(`SELECT * FROM reviews WHERE product_id = ${req.params.id}`, function(err, result) {
+    console.log('reached this point', err, result)
     if (err) {
       throw err;
     } else {
