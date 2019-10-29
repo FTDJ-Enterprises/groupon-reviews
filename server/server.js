@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
 const db = require("../database_reviews/database.js");
+const port = 3001;
 
 app.use(bodyParser.json());
 app.use(express.static("public"));
@@ -13,6 +14,7 @@ app.use(function(req, res, next) {
 
 app.get("/api/:id/reviews", (req, res) => {
   db.query(`SELECT * FROM reviews WHERE product_id = ${req.params.id}`, function(err, result) {
+    console.log('reached this point', err, result)
     if (err) {
       throw err;
     } else {
@@ -21,6 +23,6 @@ app.get("/api/:id/reviews", (req, res) => {
   });
 });
 
-app.listen(3001, () => console.log(`server app listening on port 3001!`));
+app.listen(port, () => console.log(`server app listening on port ${port}!`));
 
 module.exports = app;

@@ -8,7 +8,7 @@
     "node": ">=6.13.0"
   },
   "scripts": {
-    "start": "webpack -d --watch & nodemon ./server/server.js",
+    "start": "webpack -p & node ./server/server.js",
     "seed": "node ./database_reviews/fake-data.js",
     "test": "jest"
   },

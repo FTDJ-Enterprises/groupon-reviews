@@ -14,8 +14,13 @@ module.exports = {
   },
   optimization: {
     splitChunks: {
-      minChunks: Infinity,
-      name: true
+      cacheGroups: {
+        commons: {
+          test: /[\\/]node_modules[\\/]/,
+          name: "vendor",
+          chunks: "all"
+        }
+      }
     },
     runtimeChunk: {
       name: "vendor"
